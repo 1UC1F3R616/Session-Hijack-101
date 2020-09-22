@@ -1,13 +1,12 @@
 # Session-Hijack-101
 
-## Woking (On Target Machine) | Ideally you only need two files --> requirements.txt and api_exploit.py
+#### Woking (On Target Machine) | Ideally you only need two files --> requirements.txt and api_exploit.py
 - Install requirements
     - `pip install -r requirements.txt`
 - Execute api_exploit.py
 
 #### Now session id is logged on your api endpoint
 
------------------------------------------------
 
 ## Important Talk
 ```txt
