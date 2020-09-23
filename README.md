@@ -24,3 +24,6 @@ my project requirement.
 - IP Logging to detect possible hijack and prevent by invalidating the detected session
 - Inactivity leads to session timeout
 - Educating students to follow security guidelines such as logging out and not simply closing the window
+
+
+- Link for viewing the session: [here](https://sessionhijack.herokuapp.com/moodle)
