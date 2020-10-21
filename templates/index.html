@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
+    <title>Interests View</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div style="margin-top: 10px" class="ui container">
+        <h2>User Analysis Dashboard</h2>
+
+        <button class="ui button primary">
+            Show Menu
+        </button>
+
+        <div class="ui sidebar inverted  
+                        vertical menu">
+            <h2 style="color:white; margin-left: 15px; margin-top: 10px">Menu</h2>
+            <a class="item">
+                Dashboard
+            </a>
+            <a class="item">
+                Websites
+            </a>
+            <a class="item">
+                Leaks
+            </a>
+            <a class="item">
+                About
+            </a>
+        </div>
+        <div class="pusher">
+            <!-- Site content !-->
+        </div>
+
+        <br>
+
+        <canvas id="myChart" width="800" height="450"></canvas>
+
+        <br><br>
+
+        <canvas id="chartjs-1" class="chartjs" width="800" height="450"
+            style="display: block; height: 385px; width: 770px;"></canvas>
+
+
+
+        <!-- JS Integration -->
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+        </script>
+
+        <script>
+            $('button').click(function () {
+                $('.ui.sidebar').sidebar('toggle');
+            })
+
+            // visual chart
+            data = {
+                datasets: [{
+                    data: [10, 20, 30, 0, 15, 5, 7],
+                    backgroundColor: ["rgb(54, 162, 235)", "#CCFFFF", "rgb(255, 99, 132)", "rgb(255, 205, 86)", "#FFFFCC", "lightgreen", "grey"]
+                }],
+
+                labels: [
+                    'Education',
+                    'Entertainment',
+                    'Malicious',
+                    'Shopping and Self',
+                    'Social Networking',
+                    'Travel and Tourism',
+                    'Others'
+                ],
+
+            };
+
+            var ctx = document.getElementById("myChart");
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: Chart.defaults.pie
+            });
+
+            new Chart(document.getElementById("chartjs-1"),
+                {
+                    "type": "bar",
+                    "data":
+                    {
+                        "labels": ["Tokens", "Session Ids"],
+                        "datasets": [{
+                            "label": "Leaks", "data": [65, 59],
+                            "fill": false,
+                            "backgroundColor": ["rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)"], "borderColor": ["rgb(75, 192, 192)", "rgb(54, 162, 235)"],
+                            "borderWidth": 1
+                        }]
+                    },
+                    "options": { "scales": { "yAxes": [{ "ticks": { "beginAtZero": true } }] } }
+                });
+
+        </script>
+</body>
+
+</html>

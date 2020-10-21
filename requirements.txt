@@ -4,3 +4,5 @@ keyring
 lz4
 pycryptodome
 requests
+fastapi
+uvicorn
