@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
+
+    <title>User Habits</title>
+</head>
+<body style="padding: 10px;">
+
+    <div style="margin-top: 10px" class="ui container">
+
+        <button class="ui button primary">
+            Show Menu
+        </button>
+
+        <div class="ui sidebar inverted  
+                        vertical menu">
+            <h2 style="color:white; margin-left: 15px; margin-top: 10px">Menu</h2>
+            <a href="./index.html" class="item">
+                Dashboard
+            </a>
+            <a href="./websites.html" class="item">
+                Websites
+            </a>
+            <a href="./leaks.html" class="item">
+                Leaks
+            </a>
+            <a href="./about.html" class="item">
+                About
+            </a>
+        </div>
+        <div class="pusher">
+            <!-- Site content !-->
+        </div>
+
+        <br>
+
+    <div class="ui three column grid">
+        <div class="column" style="padding-left: 30px">
+          <div class="ui raised segment">
+            <a class="ui blue ribbon label">Education</a>
+            <br>
+            <br><span><b>Account Details</b></span>
+            <br><span><b>Account Details</b></span>
+            <br><span><b>Account Details</b></span>
+            <br><span><b>Account Details</b></span>
+          </div>
+        </div>
+
+          <div class="column">
+            <div class="ui raised segment">
+              <a class="ui teal ribbon label">Entertainment</a>
+              <br>
+              <br><span><b>Account Details</b></span>
+            </div>
+          </div>
+
+        <div class="column" style="padding-right: 30px">
+            <div class="ui raised segment">
+              <a class="ui red ribbon label">Malicious</a>
+              <br>
+              <br><span><b>Account Details</b></span>
+            </div>
+          </div>
+      </div>
+
+      <div class="ui three column grid">
+        <div class="column" style="padding-left: 30px">
+          <div class="ui raised segment">
+            <a class="ui yellow ribbon label">Shopping & Self</a>
+            <br>
+            <br><span><b>Account Details</b></span>
+          </div>
+        </div>
+
+          <div class="column">
+            <div class="ui raised segment">
+              <a class="ui  ribbon label">Social Networking</a>
+              <br>
+              <br><span><b>Account Details</b></span>
+            </div>
+          </div>
+
+        <div class="column" style="padding-right: 30px">
+            <div class="ui raised segment">
+              <a class="ui green ribbon label">Travel and Tourism</a>
+              <br>
+              <br><span><b>Account Details</b></span>
+            </div>
+          </div>
+      </div>
+
+
+              <!-- JS Integration -->
+
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+              </script>
+  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+          </script>
+      <script>
+          $('button').click(function () {
+                $('.ui.sidebar').sidebar('toggle');
+            })
+      </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
+
+    <title>About Page</title>
+</head>
+<body style="padding: 10px;">
+
+    <div style="margin-top: 10px" class="ui container">
+        <h2>About Page</h2>
+
+        <button class="ui button primary">
+            Show Menu
+        </button>
+
+        <div class="ui sidebar inverted  
+                        vertical menu">
+            <h2 style="color:white; margin-left: 15px; margin-top: 10px">Menu</h2>
+            <a href="./index.html" class="item">
+                Dashboard
+            </a>
+            <a href="./websites.html" class="item">
+                Websites
+            </a>
+            <a href="./leaks.html" class="item">
+                Leaks
+            </a>
+            <a href="./about.html" class="item">
+                About
+            </a>
+        </div>
+        <div class="pusher">
+            <!-- Site content !-->
+        </div>
+
+        <br>
+
+        <div class="ui three column grid special cards">
+
+            <div class="card">
+                <div class="ui slide masked reveal image">
+                  <img src="../media/images/professor.jpg" class="visible content">
+                  <img src="../media/images/professor.jpg" class="hidden content">
+                </div>
+                <div class="content">
+                  <a class="header">Dr. CHANDRA MOHAN B</a>
+                  <div class="meta">
+                    <span class="date">chandramohan.b@vit.ac.in</span>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    Mentor
+                  </a>
+                </div>
+              </div>
+
+        <div class="card">
+            <div class="ui slide masked reveal image">
+              <img src="../media/images/aryan_pic1.jpeg" class="visible content">
+              <img src="../media/images/aryan2.jpeg" class="hidden content">
+            </div>
+            <div class="content">
+              <a class="header">Aryan Sharma</a>
+              <div class="meta">
+                <span class="date">18BCE0547</span>
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="users icon"></i>
+                Developer
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="ui slide masked reveal image">
+              <img src="../media/images/kush1.png" class="visible content" style="width:245px">
+              <img src="../media/images/kush2.png" class="hidden content">
+            </div>
+            <div class="content">
+              <a class="header">Kush Choudhary</a>
+              <div class="meta">
+                <span class="date">18BCE0557</span>
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="users icon"></i>
+                Developer
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+              <!-- JS Integration -->
+
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+              </script>
+  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+          </script>
+      <script>
+          $('button').click(function () {
+                $('.ui.sidebar').sidebar('toggle');
+            })
+      </script>
+</body>
+</html>

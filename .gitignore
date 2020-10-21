@@ -248,3 +248,4 @@ dist
 .pnp.*
 
 mongoose.js
+.vscode
