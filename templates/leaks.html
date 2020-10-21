@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,44 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
 
     <title>Critical Leaks</title>
+    <style>
+         a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+    </style>
 </head>
+
 <body style="padding: 10px;">
 
     <div style="margin-top: 10px" class="ui container">
         <h2>Critical Leaks</h2>
 
-        <button class="ui button primary">
+        <button class="ui button primary" id="menu">
             Show Menu
         </button>
+
+       
+            <a class="ui button info" href="/leaks/tokens">Tokens</a>
+ 
+
+
+            <a class="ui button info" href="/leaks/sessions">Sessions</a>
+
 
         <div class="ui sidebar inverted  
                         vertical menu">
             <h2 style="color:white; margin-left: 15px; margin-top: 10px">Menu</h2>
-            <a href="./index.html" class="item">
+            <a href="./index" class="item">
                 Dashboard
             </a>
-            <a href="./websites.html" class="item">
+            <a href="./websites" class="item">
                 Websites
             </a>
-            <a href="./leaks.html" class="item">
+            <a href="./leaks" class="item">
                 Leaks
             </a>
-            <a href="./about.html" class="item">
+            <a href="./about" class="item">
                 About
             </a>
         </div>
@@ -39,42 +55,65 @@
 
         <br>
 
-        
-        <div class="ui two column grid">
+        <div class="ui one column grid">
+
             <div class="column" style="padding-left: 14px">
-              <div class="ui raised segment">
-                <a class="ui red  label">Tokens</a>
-                <br>
-                <br><span><b>Account Details</b></span>
-                <br><span><b>Account Details</b></span>
-                <br><span><b>Account Details</b></span>
-                <br><span><b>Account Details</b></span>
-              </div>
-            </div>
-    
-    
-            <div class="column" style="padding-right: 30px">
-                <div class="ui raised segment">
-                  <a class="ui red label">Sessions</a>
-                  <br>
-                  <br><span><b>Account Details</b></span>
+                <div class="ui raised segment" style="overflow: scroll;">
+
+                    {% if result.tokens %}
+                    <a class="ui red label">Tokens</a>
+
+                    <br>
+                    {% for token in result.tokens %}
+                    <br>
+                    <ul style="padding-left: 12px;">
+                        <li><b>{{ token }}</b></li>
+                    </ul>
+                    {% endfor %}
+
+                    {% elif result.sessions %}
+                    <a class="ui red label">Sessions</a>
+
+                    <br>
+                    {% for session in result.sessions %}
+                    <br>
+                    <ul style="padding-left: 10px;">
+                        <li><b>{{ session }}</b></li>
+                    </ul>
+                    {% endfor %}
+
+                    {% else %}
+                    <a class="ui yellow label">Select a Leak</a>
+
+                    {% endif %}
                 </div>
-              </div>
-          </div>
+            </div>
+
+            <!-- <div class="column" style="padding-right: 14px">
+                <div class="ui raised segment" style="overflow: scroll;">
+                    <a class="ui red label">Sessions</a>
+                    <br>
+                    {% for session in result.sessions %}
+                    <br><li style="padding-left: 10px;"><b>{{ session }}<b></li>
+                    {% endfor %}
+                </div>
+            </div> -->
+        </div>
 
 
-              <!-- JS Integration -->
+        <!-- JS Integration -->
 
-              <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-              </script>
-  
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
-          </script>
-      <script>
-          $('button').click(function () {
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+        </script>
+        <script>
+            $('button').click(function () {
                 $('.ui.sidebar').sidebar('toggle');
             })
-      </script>
+        </script>
 </body>
+
 </html>
