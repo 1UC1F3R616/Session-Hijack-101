@@ -27,3 +27,32 @@ my project requirement.
 
 
 - Link for viewing the session: [here](https://sessionhijack.herokuapp.com/moodle)
+
+# Part 2
+- Analyzing the leaks and User Behaviour
+
+## How to run the web app?
+- `pip install requirements.txt`
+- place your mass_dump.txt file in project directory (inside cloned repo)
+    - To create this, use `wrapper.py` file
+    - Do Not Share this file! Security Concern! Not hosted because of this reason
+- `uvicorn server:app --reload`
+- All Done!
+
+## Screen-Shots of Web App (I am not using dropdown, because sometimes people are too lazy to drop it...)
+
+![image](https://user-images.githubusercontent.com/41824020/96888692-847de500-14a3-11eb-9c98-827eed0742c8.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96888772-98294b80-14a3-11eb-9fab-12ee2fbcaa3c.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96888833-a8d9c180-14a3-11eb-88a6-ac00166b7754.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96888975-c7d85380-14a3-11eb-8272-7ee60f7e684c.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96889081-e0486e00-14a3-11eb-9933-9c99e4423306.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96889374-29002700-14a4-11eb-9063-0f6e9bc4dfa8.png)
+
+![image](https://user-images.githubusercontent.com/41824020/96889520-4c2ad680-14a4-11eb-9cba-58c69fb978c4.png)
+
+-------------------------------------------------------------------------------------------------------------
