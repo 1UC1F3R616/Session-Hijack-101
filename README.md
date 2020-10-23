@@ -33,9 +33,6 @@ my project requirement.
 
 ## How to run the web app?
 - `pip install requirements.txt`
-- place your mass_dump.txt file in project directory (inside cloned repo)
-    - To create this, use `wrapper.py` file
-    - Do Not Share this file! Security Concern! Not hosted because of this reason
 - `uvicorn server:app --reload`
 - All Done!
 
