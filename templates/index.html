@@ -68,7 +68,7 @@
             // visual chart
             data = {
                 datasets: [{
-                    data: [10, 20, 30, 0, 15, 5, 7],
+                    data: [ "{{ result.Education }}", "{{ result.Entertainment }}", "{{ result.Malicious }}", "{{ result.Shopping_and_Self }}", "{{ result.Social_Networking }}", "{{ result.Travel_and_Tourism }}", "{{ result.Others }}"],
                     backgroundColor: ["rgb(54, 162, 235)", "#CCFFFF", "rgb(255, 99, 132)", "rgb(255, 205, 86)", "#FFFFCC", "lightgreen", "grey"]
                 }],
 
@@ -98,7 +98,7 @@
                     {
                         "labels": ["Tokens", "Session Ids"],
                         "datasets": [{
-                            "label": "Leaks", "data": [65, 59],
+                            "label": "Leaks", "data": ["{{ result.tokens }}", "{{ result.sessions }}"],
                             "fill": false,
                             "backgroundColor": ["rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)"], "borderColor": ["rgb(75, 192, 192)", "rgb(54, 162, 235)"],
                             "borderWidth": 1

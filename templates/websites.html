@@ -43,10 +43,9 @@
           <div class="ui raised segment">
             <a class="ui blue ribbon label">Education</a>
             <br>
-            <br><span><b>Account Details</b></span>
-            <br><span><b>Account Details</b></span>
-            <br><span><b>Account Details</b></span>
-            <br><span><b>Account Details</b></span>
+            {% for website in result.Education %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
           </div>
         </div>
 
@@ -54,7 +53,9 @@
             <div class="ui raised segment">
               <a class="ui teal ribbon label">Entertainment</a>
               <br>
-              <br><span><b>Account Details</b></span>
+              {% for website in result.Entertainment %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
             </div>
           </div>
 
@@ -62,7 +63,9 @@
             <div class="ui raised segment">
               <a class="ui red ribbon label">Malicious</a>
               <br>
-              <br><span><b>Account Details</b></span>
+              {% for website in result.Malicious %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
             </div>
           </div>
       </div>
@@ -72,7 +75,9 @@
           <div class="ui raised segment">
             <a class="ui yellow ribbon label">Shopping & Self</a>
             <br>
-            <br><span><b>Account Details</b></span>
+            {% for website in result.Shopping_and_Self %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
           </div>
         </div>
 
@@ -80,7 +85,9 @@
             <div class="ui raised segment">
               <a class="ui  ribbon label">Social Networking</a>
               <br>
-              <br><span><b>Account Details</b></span>
+              {% for website in result.Social_Networking %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
             </div>
           </div>
 
@@ -88,7 +95,9 @@
             <div class="ui raised segment">
               <a class="ui green ribbon label">Travel and Tourism</a>
               <br>
-              <br><span><b>Account Details</b></span>
+              {% for website in result.Travel_and_Tourism %}
+            <br><span><b>{{ website }}</b></span>
+            {% endfor  %}
             </div>
           </div>
       </div>
