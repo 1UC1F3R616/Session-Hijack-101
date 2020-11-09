@@ -36,6 +36,10 @@ my project requirement.
 - `uvicorn server:app --reload`
 - All Done!
 
+## Videos
+- [Moodle](https://www.youtube.com/watch?v=AhYOtVVSKfo)
+- [Schoology](https://www.youtube.com/watch?v=IyMPlgPhxW4)
+
 ## Screen-Shots of Web App (I am not using dropdown, because sometimes people are too lazy to drop it...)
 
 ![image](https://user-images.githubusercontent.com/41824020/96888692-847de500-14a3-11eb-9c98-827eed0742c8.png)
